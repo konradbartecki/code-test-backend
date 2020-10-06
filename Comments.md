@@ -7,19 +7,16 @@
     
     This basically means:
     ```
-    Return 1 (true)
-   OR if false 
-   Return application ID (min int - max int range)
-   //at this point this too many things are happening here
-   //if we want to return multiple properties like:
-   // - success status
-   // - application id
-   // it should be encapsulated in a clearly defined object
-   OR if null
-   return -1 //redundant
-   OR
-   return -1
+    if true
+        if app id exists
+            return result app id
+        else
+            return -1
+    else
+        return -1     
     ``` 
+
+    Readbility is poor, I recommend refactoring to always return a clearly defined object   
   
  3. Using `if type is XYZ` logic is not really extensible if we would want to add more microservices in the future. Now in real life I wouldn't refactor this because this file is simple enough.
  4. `IConfidentialInvoiceService` has too many parameters

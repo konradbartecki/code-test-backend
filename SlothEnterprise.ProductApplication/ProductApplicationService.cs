@@ -18,7 +18,7 @@ namespace SlothEnterprise.ProductApplication
             _confidentialInvoiceWebService = confidentialInvoiceWebService;
             _businessLoansService = businessLoansService;
         }
-
+        
         public int SubmitApplicationFor(ISellerApplication application)
         {
 
